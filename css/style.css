@@ -1,3 +1,8 @@
+body {
+    background-color: rgb(245, 243, 243);
+    padding-bottom: 50px;
+}
+
 .nav {
     height: auto;
     background-color: aliceblue;
@@ -25,7 +30,8 @@
 }
 
 .column {
-    border: 1px solid red;
+    background-color: white;
+    padding-top: 20px;
 }
 
 #portfolio_content, #resume_content {
@@ -38,10 +44,17 @@
 }
 
 .short_information {
-    background-color: gainsboro;
-    padding: 30px 20px 10px;
+    background-color: white;
+    padding: 30px 10px 10px;
 }
 
-th {
-    width: 80%;
+.progress-bar {
+    background-color: lightgray;
+    width: 100%;
+    height: 20px;
+}
+
+.completed-progress-bar {
+    background-color: cornflowerblue;
+    height: 100%;
 }
