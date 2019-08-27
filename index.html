@@ -1,14 +1,66 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Scriptioner</title>
-  <base href="/">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="stylesheet" href="styles.ab5f1ccc98a9b4da89ad.css"></head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Resume</title>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
 <body>
-  <app-root></app-root>
-<script type="text/javascript" src="runtime.a5dd35324ddfd942bef1.js"></script><script type="text/javascript" src="es2015-polyfills.4a4cfea0ce682043f4e9.js" nomodule></script><script type="text/javascript" src="polyfills.407a467dedb63cfdd103.js"></script><script type="text/javascript" src="main.3f42c96c3886b0c317e7.js"></script></body>
+    <nav class="nav">
+        <div class="colapse navbar-colapse">
+            <button id="about_btn" class="nav-btn" onclick="click_about()">
+                <strong>ABOUT ME</strong>
+            </button>
+            <button id="portfolio_btn" class="nav-btn" onclick="click_portfolio()">
+                <strong>PORTFOLIO</strong>
+            </button>
+            <button id="resume_btn" class="nav-btn" onclick="click_resume()">
+                <strong>RESUME</strong>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 column">
+                <h4>Some Info For Me</h4>
+                <img src="img/pic.jpg" alt="Photo Of Me" width="100%">
+                <div class="short_information">
+                    <table>
+                        <tr>
+                            <th>NAME</th>
+                            <td>Svetoslav Nedelchev</td>
+                        </tr>
+                        <tr>
+                            <th>AGE</th>
+                            <td>22 Years</td>
+                        </tr>
+                        <tr>
+                            
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-md-1">
+                
+            </div>
+            <div id="about_content" class="col-md-8 column">
+                About me
+            </div>
+            <div id="portfolio_content" class="col-md-8 column">
+                portfolio
+            </div>
+            <div id="resume_content" class="col-md-8 column">
+                resume
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+</body>
 </html>

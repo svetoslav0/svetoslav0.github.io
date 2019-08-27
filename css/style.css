@@ -1,0 +1,47 @@
+.nav {
+    height: auto;
+    background-color: aliceblue;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.nav-btn {
+    height: 50px;
+    width: 200px;
+    background-color: aliceblue;
+    border: 0px;
+}
+
+.nav-btn:hover {
+    background-color: cornflowerblue;
+    color: white;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
+.column {
+    border: 1px solid red;
+}
+
+#portfolio_content, #resume_content {
+    display: none;
+}
+
+#about_btn {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.short_information {
+    background-color: gainsboro;
+    padding: 30px 20px 10px;
+}
+
+th {
+    width: 80%;
+}
