@@ -20,13 +20,13 @@
                 <i class="fas fa-user"></i>
                 <strong>ABOUT ME</strong>
             </button>
-            <button id="portfolio_btn" class="nav-btn" onclick="click_portfolio()">
-                <i class="fas fa-list-alt"></i>
-                <strong>PORTFOLIO</strong>
-            </button>
-            <button id="resume_btn" class="nav-btn" onclick="click_resume()">
+            <button id="projects_btn" class="nav-btn" onclick="click_projects()">
                 <i class="fas fa-pencil-alt"></i>
-                <strong>RESUME</strong>
+                <strong>PROJECTS</strong>
+            </button>
+            <button id="background_btn" class="nav-btn" onclick="click_background()">
+                <i class="fas fa-list-alt"></i>
+                <strong>BACKGROUND</strong>
             </button>
         </div>
     </nav>
@@ -88,6 +88,7 @@
                     <strong>ABOUT ME</strong>
                 </h3>
                 <hr>
+                <br />
                 <!-- MAIN INFO START -->
                 <div class="row">
                     <div class="col-md-2">
@@ -110,7 +111,7 @@
                         <strong>LOCATION</strong>
                     </div>
                     <div class="col-md-3">
-                        Sofia
+                        Sofia, Bulgaria
                     </div>
                     <div class="col-md-2">
                         <strong>HIGHER EDUCATION</strong>
@@ -267,15 +268,15 @@
             </div>
             <!-- ABOUT CONTENT END -->
 
-            <!-- PORTFOLIO CONTENT START -->
-            <div id="portfolio_content" class="col-md-8 column">
+            <!-- PROJECTS CONTENT START -->
+            <div id="projects_content" class="col-md-8 column">
                 
-                <h4><strong>Projects I Have Worked On</strong></h4>
+                <h3><strong>PROJECTS I HAVE WORKED ON</strong></h3>
                 <hr>
                 <br />
                 <!-- Reversed IP Lookup Description START -->
                 <h5>
-                    <div class="project_title">
+                    <div class="title">
                         Reversed IP Lookup API
                     </div>
                 </h5>
@@ -302,7 +303,7 @@
 
                 <!-- Script-ioner Description START -->
                 <h5>
-                    <div class="project_title">
+                    <div class="title">
                         Script-ioner - A Trivia Quiz Multiplayer Game
                     </div>
                 </h5>
@@ -314,7 +315,7 @@
                     </div>
                     <div class="col-md-6">
                         <p>            
-                            <strong>Script-ioner</strong> is web-based quiz multiplayer game and it was developed during my internship in Casualino JSC (more information about this internship can be found in the Resume section).
+                            <strong>Script-ioner</strong> is web-based quiz multiplayer game and it was developed during my internship in Casualino JSC (more information about this internship can be found in the 'Background' section).
                             When the game starts the player must type his/her <strong>username</strong>. After that he/she either visits the <strong>'waiting room'</strong> or joins a game deppending on wheather anyone else is waiting for a player to <strong>join his/her game</strong> or a <strong>new room</strong> has to be created.
                         </p>
                     </div>
@@ -357,7 +358,7 @@
 
                 <!-- NVNA Project Description START -->
                 <h5>
-                    <div class="project_title">
+                    <div class="title">
                         Electronic Journal - Thesis For Naval Academy "N. Y. Vaptsarov"
                     </div>
                 </h5>
@@ -414,7 +415,7 @@
 
                 <!-- E-SHOP Project Description START -->
                 <h5>
-                    <div class="project_title">
+                    <div class="title">
                         Upgrading an already existing E-Shop application
                     </div>
                 </h5>
@@ -423,7 +424,7 @@
                         <p>
                             Back in 2017, a small task was given to me: <strong>to upgrade an existing application</strong>. 
                             That was the first project I have ever worked on. It contained an admin panel where administrator could add, edit or remove <strong>categories</strong>,
-                            <strong>sub-categories</strong> and inside the different <strong>items</strong>. The task was simple: to add function for <strong>apply, edit and remove discounts</strong> on a category, sub-category or a single item.
+                            <strong>sub-categories</strong> and inside - different <strong>items</strong>. The task was simple: to add function for <strong>applying, editing and removing discounts</strong> on a category, sub-category or a single item.
                             When an administrator applies discount to a sub-category, he/she has to select <strong>how the discount will be applied</strong>.
                             Either to rewrite the discounts on the single items or to ignore them.
                             The same way works applying a discount to <strong>a whole category</strong>.
@@ -441,14 +442,140 @@
                 <!-- E-SHOP Project Description END -->
 
             </div>
-            <!-- PORTFOLIO CONTENT END -->
+            <!-- PROJECTS CONTENT END -->
 
-            <!-- RESUME CONTENT START -->
-            <div id="resume_content" class="col-md-8 column">
-                where i have worked and what i have learned
-                resume
+            <!-- BACKGROUND CONTENT START -->
+            <div id="background_content" class="col-md-8 column">
+                <h3>
+                    <strong>
+                        PROFESSIONAL EXPERIENCE
+                    </strong>
+                </h3>
+                <hr>
+                <br />
+                <!-- Professional Experience Description START -->
+                <div class="row">
+                    <div class="col-md-3">
+                        <strong>
+                            August 2019
+                        </strong>
+                    </div>
+                    <div class="col-md-9">
+                        <strong>Freelance Project</strong><br />
+                        A small <strong>API</strong> for reversed IP lookup with database that contains hundreds of millions of rows. <br />
+                        <strong>Used technologies:</strong> PHP, MySQL, Linux<br /><br />
+                        More information of this project can be found in the <strong>'Projects' section</strong>.
+                    </div>
+                </div>
+                <br />
+                <br />
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <strong>
+                            February 2019 - April 2019
+                        </strong>
+                    </div>
+                    <div class="col-md-9">
+                        <strong>Back-End Internship</strong><br />
+                        Internship in <strong>Casualino JSC</strong> where I have developed a web-based multiplayer quiz game for educational purposes. <br />
+                        <strong>Used technologies:</strong> TypeScript, NodeJS, Express.js, MySQL, Angular, Socket.io <br /><br />
+                        More information of this project can be found in the <strong>'Projects' section</strong>.
+
+                    </div>
+                </div>
+                <br />
+                <br />
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <strong>
+                            March 2019 - April 2019, October 2018 - December 2018
+                        </strong>
+                    </div>
+                    <div class="col-md-9">
+                        <strong>Lecturer and Assistant Lecturer</strong><br />
+                        Teaching at Software University in Varna for a course <strong>Programming Basics with C#</strong>.
+                        Demonstration of good and bad practices and solving a lot of exercises in front of the students.
+                    </div>
+                </div>
+                <br />
+                <br />
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <strong>
+                            October 2019
+                        </strong>
+                    </div>
+                    <div class="col-md-9">
+                        <strong>Freelance project</strong><br />
+                        Upgrading an existing E-Shop application. Added function to apply discount on different items, sub-categories or a category with different options.
+                        <br /><br />
+                        More information of this project can be found in the <strong>'Projects' section</strong>.
+                    </div>
+                </div>
+                <br />
+                <br />
+                <!-- Professional Experience Description END -->
+
+                <h3>
+                    <strong>
+                        EDUCATIONAL BACKGROUND
+                    </strong>
+                </h3>
+                <hr>
+                <br />
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <strong>
+                            Since January 2018
+                        </strong>
+                    </div>
+                    <div class="col-md-9">
+                        <strong>Software University - SoftUni</strong><br />
+                        Software Engineering Program - PHP and JavaScript Development <br />
+                        (As a remote student)
+                    </div>
+                </div>
+                <br />
+                <br />
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <strong>
+                            September 2015 - June 2019
+                        </strong>
+                    </div>
+                    <div class="col-md-9">
+                        <strong>
+                            Naval Academy "N. Y. Vaptsarov" - Varna, Bulgaria
+                        </strong><br />
+                        Information Technologies
+                    </div>
+                </div>
+                <br />
+                <br />
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <strong>
+                            September 2010 - May 2015
+                        </strong>
+                    </div>
+                    <div class="col-md-9">
+                        <strong>
+                            High School Of Mathematics "Dr. P. Beron" - Varna, Bulgaria
+                        </strong><br />
+                        Mathematics and English <br />
+                        <strong>Additional courses: </strong> Photoshop Basics, AutoCAD Basics, AutoCAD Advanced
+                    </div>
+                </div>
+
+
             </div>
-            <!-- RESUME CONTENT END -->
+            <!-- BACKGROUND CONTENT END -->
 
             <!-- ADDITIONAL INFO END -->
         </div>

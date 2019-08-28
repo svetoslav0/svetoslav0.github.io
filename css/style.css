@@ -36,7 +36,7 @@ body {
     padding-bottom: 30px;
 }
 
-#portfolio_content, #resume_content {
+#projects_content, #background_content {
     display: none;
 }
 
@@ -61,7 +61,7 @@ body {
     height: 100%;
 }
 
-.project_title {
+.title {
     font-weight: bold;
     text-decoration: underline;
 }

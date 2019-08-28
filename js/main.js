@@ -1,12 +1,12 @@
 function hideAllContents() 
 {
     let aboutContent = document.getElementById('about_content');
-    let portfolioContent = document.getElementById('portfolio_content');
-    let resumeContent = document.getElementById('resume_content');
+    let projectsContent = document.getElementById('projects_content');
+    let backgroundContent = document.getElementById('background_content');
 
     aboutContent.style.display = 'none';
-    portfolioContent.style.display = 'none';
-    resumeContent.style.display = 'none';
+    projectsContent.style.display = 'none';
+    backgroundContent.style.display = 'none';
 }
 
 function click_about() 
@@ -19,24 +19,24 @@ function click_about()
     selectBtn('about_btn');
 }
 
-function click_portfolio() 
+function click_projects() 
 {
     hideAllContents();
 
-    let portfolioContent = document.getElementById('portfolio_content');
-    portfolioContent.style.display = "block";
+    let projectsContent = document.getElementById('projects_content');
+    projectsContent.style.display = "block";
 
-    selectBtn('portfolio_btn');
+    selectBtn('projects_btn');
 }
 
-function click_resume()
+function click_background()
 {
     hideAllContents();
 
-    let resumeContent = document.getElementById('resume_content');
-    resumeContent.style.display = "block";
+    let backgroundContent = document.getElementById('background_content');
+    backgroundContent.style.display = "block";
 
-    selectBtn('resume_btn');
+    selectBtn('background_btn');
 }
 
 function selectBtn(button)
@@ -51,15 +51,15 @@ function selectBtn(button)
 function unselectAllButtons()
 {
     let aboutBtn = document.getElementById('about_btn');
-    let portfolioBtn = document.getElementById('portfolio_btn');
-    let resumeBtn = document.getElementById('resume_btn');
+    let projectsBtn = document.getElementById('projects_btn');
+    let backgroundBtn = document.getElementById('background_btn');
 
     aboutBtn.style.backgroundColor = 'aliceblue';
-    portfolioBtn.style.backgroundColor = 'aliceblue';
-    resumeBtn.style.backgroundColor = 'aliceblue';
+    projectsBtn.style.backgroundColor = 'aliceblue';
+    backgroundBtn.style.backgroundColor = 'aliceblue';
 
     aboutBtn.style.color = 'black';
-    portfolioBtn.style.color = 'black';
-    resumeBtn.style.color = 'black';
+    projectsBtn.style.color = 'black';
+    backgroundBtn.style.color = 'black';
 }
 
