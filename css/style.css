@@ -61,6 +61,11 @@ body {
     height: 100%;
 }
 
+.project_title {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 p {
     text-align: justify;
 }
