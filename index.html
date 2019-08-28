@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,35 @@
     <title>Resume</title>
     <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
+
 <body>
+    <!-- NAVIGATION START -->
     <nav class="nav">
         <div class="colapse navbar-colapse">
             <button id="about_btn" class="nav-btn" onclick="click_about()">
+                <i class="fas fa-user"></i>
                 <strong>ABOUT ME</strong>
             </button>
             <button id="portfolio_btn" class="nav-btn" onclick="click_portfolio()">
+                <i class="fas fa-list-alt"></i>
                 <strong>PORTFOLIO</strong>
             </button>
             <button id="resume_btn" class="nav-btn" onclick="click_resume()">
+                <i class="fas fa-pencil-alt"></i>
                 <strong>RESUME</strong>
             </button>
         </div>
     </nav>
+    <!-- NAVIGATION END -->
 
+    <!-- CONTENT START -->
     <div class="container">
         <div class="row">
+
+            <!-- SHORT CART START -->
             <div class="col-md-3 column">
                 <h4>Short Info About Me</h4>
                 <img src="img/pic.jpg" alt="Photo Of Me" width="100%">
@@ -63,15 +75,20 @@
                     </div>
                 </div>
             </div>
+            <!-- SHORT CART END -->
 
             <div class="col-md-1">
-                
+
             </div>
+
+            <!-- ADDITIONAL INFO START -->
             <div id="about_content" class="col-md-8 column">
+                <!-- ABOUT CONTENT START -->
                 <h3>
                     <strong>ABOUT ME</strong>
                 </h3>
                 <hr>
+                <!-- MAIN INFO START -->
                 <div class="row">
                     <div class="col-md-2">
                         <strong>NAME</strong>
@@ -79,7 +96,7 @@
                     <div class="col-md-3">
                         Svetoslav Nedelchev
                     </div>
-                    
+
                     <div class="col-md-2">
                         <strong>SECONDARY EDUCATION</strong>
                     </div>
@@ -103,7 +120,7 @@
                     </div>
                 </div>
                 <br />
-                
+
                 <div class="row">
                     <div class="col-md-2">
                         <strong>PHONE</strong>
@@ -119,10 +136,12 @@
                     </div>
                 </div>
                 <br /><br />
-                
+                <!-- MAIN INFO END -->
+
+                <!-- SKILLS WITH PROGRESS BARS START -->
                 <h3>Skills</h3>
                 <hr>
-                
+
                 <div class="row">
                     <div class="col-md-2">
                         <strong>PHP</strong>
@@ -244,29 +263,116 @@
                         </div>
                     </div>
                 </div>
-<!-- 
-                oop -> 90%
-                mvc -> 75%
-                socket.io -> 60%
-                codeigniter -> 75%
-                html/css -> 65%
-                mongodb -> 40% -->
-                
-                
-
-
+                <!-- SKILLS WITH PROGRESS BAR END -->
             </div>
+            <!-- ABOUT CONTENT END -->
+
+            <!-- PORTFOLIO CONTENT START -->
             <div id="portfolio_content" class="col-md-8 column">
-                portfolio
+                
+                <h4><strong>Projects I Have Worked On</strong></h4>
+                <hr>
+                <br />
+                <!-- Reversed IP Lookup Description START -->
+                <h5>Reversed IP Lookup API</h5>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>
+                            A small <strong>API</strong> that provides an information about domains that contain the same <strong>IP address</strong> as the given.
+                            The main idea is to find out what other <strong>domains</strong> are hosted on the <strong>same server</strong> as the given.
+                            The API may receive a <strong>domain name</strong> or an <strong>IP address</strong> of the target and returns a JSON with list of all found domains.
+                            It uses MySQL database with <strong>over 200 million records</strong>, containing domain names and IP addresses. 
+                            This project was developed on a <strong>client's requiest</strong> and it's currently in production. You can see the project structure in this GitHub repository: 
+                            <a href="https://github.com/svetoslav0/web-researcher">https://github.com/svetoslav0/web-researcher</a>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="img/projects_screenshots/rev_ip_lookup.jpg" target="_blank">
+                            <img src="img/projects_screenshots/rev_ip_lookup.jpg" alt="ReversedIpLookUpPicture" class="project_pic">
+                        </a>
+                    </div>
+                </div>
+                <!-- Reversed IP Lookup Description END -->
+                <hr>
+                <br>
+
+                <!-- Script-ioner Description START -->
+                <h5>Script-ioner - A Trivia Quiz Multiplayer Game</h5>
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="img/projects_screenshots/scriptioner_1.png" target="_blank">
+                            <img src="img/projects_screenshots/scriptioner_1.png" alt="ScriptIonerPic1" class="project_pic">
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <p>            
+                            <strong>Script-ioner</strong> is web-based quiz multiplayer game and it was developed during my internship in Casualino JSC (more information about this internship can be found in the Resume section).
+                            When the game starts the player must type his/her <strong>username</strong>. After that he/she either visits the <strong>'waiting room'</strong> or joins a game deppending on wheather anyone else is waiting for a player to <strong>join his/her game</strong> or a <strong>new room</strong> has to be created.
+                        </p>
+                    </div>
+                </div>
+                <br />
+                
+                <div class="row">
+                    <a href="img/projects_screenshots/scriptioner_2.png" target="_blank">
+                        <img src="img/projects_screenshots/scriptioner_2.png" alt="ScriptIonerPic2" class="project_pic">
+                    </a>
+                </div>
+                <p>
+                    When the game starts, <strong>ten random questions</strong> are fetched from the database and their answers are <strong>randomized too</strong>.
+                    The database contains two tables - one for the <strong>questions</strong> and one for the <strong>answers</strong>, so one question can have different <strong>number of answers</strong> and different number of <strong>right and wrong answers</strong>.
+                    The game also has a <strong>timer</strong>, so the player must be careful of his/her time, because if it expires, <strong>the game ends</strong> and he/she cannot answer the remaining questions.
+                    In that case the answered questions <strong>will be counted</strong> in the results at the end of the game. 
+                </p>
+                <br />
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>
+                            The results page show if the player is a <strong>winner</strong> or a <strong>loser</strong>. 
+                            Other information is also provided, such as <strong>every player's point</strong>.
+                            There is a formula for calculation of the point and it deppends on the <strong>given answers</strong> and the <strong>total time</strong> that the player needed to answers the questions.
+                            Each of the can also see <strong>all the questions</strong> from their game with <strong>the right</strong> and <strong>the given</strong> answers.  
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="img/projects_screenshots/scriptioner_3.png" target="_blank">
+                            <img src="img/projects_screenshots/scriptioner_3.png" alt="ScriptIonerPic3" class="project_pic">
+                        </a>
+                    </div>
+                </div>
+                <hr>
+                <br />
+                <!-- Script-ioner Description END -->
+
+                <!-- NVNA Project Description START -->
+
+
+
+                <!-- NVNA Project Description END -->
+            <!--            
+                nvna project
+                e-shop project (andreev) -->
+
             </div>
+            <!-- PORTFOLIO CONTENT END -->
+
+            <!-- RESUME CONTENT START -->
             <div id="resume_content" class="col-md-8 column">
+                where i have worked and what i have learned
                 resume
             </div>
+            <!-- RESUME CONTENT END -->
+
+            <!-- ADDITIONAL INFO END -->
         </div>
     </div>
+
+    <!-- CONTENT END -->
 
     <script src="js/bootstrap/bootstrap.js"></script>
     <script src="js/dateCalculator.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>

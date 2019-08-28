@@ -32,6 +32,8 @@ body {
 .column {
     background-color: white;
     padding-top: 20px;
+    height: min-content;
+    padding-bottom: 30px;
 }
 
 #portfolio_content, #resume_content {
@@ -57,4 +59,13 @@ body {
 .completed-progress-bar {
     background-color: cornflowerblue;
     height: 100%;
+}
+
+p {
+    text-align: justify;
+}
+
+.project_pic {
+    width: 100%;
+    border: 1px solid lightgray;
 }
