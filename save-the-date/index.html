@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save the Date | Our Wedding</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #fdfaf6;
+            --accent: #d4af37; /* Gold */
+            --text: #2c3e50;
+            --secondary-text: #7f8c8d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--primary);
+            color: var(--text);
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        header {
+            padding: 80px 20px;
+            background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), 
+                        url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .date-location {
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 400;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .photo-slot {
+            aspect-ratio: 1 / 1;
+            background-color: #eee;
+            border: 8px solid white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-slot:hover {
+            transform: scale(1.02);
+        }
+
+        .photo-slot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .details {
+            padding: 60px 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .details p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .rsvp-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
+
+        .rsvp-btn:hover {
+            background-color: var(--accent);
+            color: white;
+        }
+
+        footer {
+            padding: 40px;
+            font-size: 0.9rem;
+            color: var(--secondary-text);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <p style="letter-spacing: 5px;">ЗАПАЗЕТЕ СИ ДАТАТА</p>
+        <h1>Ани & Светльо</h1>
+        <p class="date-location"><strong>24 ОКТОМВРИ 2026 &bull; ВАРНА</strong></p>
+    </header>
+
+    <section class="photo-grid">
+        <div class="photo-slot">
+            <img src="img/1.jpg" alt="Engagement 1">
+        </div>
+        <div class="photo-slot">
+            <img src="img/2.jpg" alt="Engagement 2">
+        </div>
+        <div class="photo-slot">
+            <img src="img/3.jpg" alt="Engagement 3">
+        </div>
+        <div class="photo-slot">
+            <img src="img/4.jpg" alt="Engagement 4">
+        </div>
+    </section>
+
+    <section class="details">
+        <h2>Ще се радваме да бъдете с нас!</h2>
+        <p>Подготовката за нашия специален ден вече започна! Очаквайте скоро официална покана с повече подробности и информация за локацията. Дотогава – отбележете си датата в календара, за да не планирате нищо друго! :)</p>
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Сватбата+на+Ани+и+Светльо&dates=20261024T050000Z/20261025T020000Z" 
+            target="_blank" 
+            class="rsvp-btn" 
+            style="background-color: var(--accent); color: white;">
+            Добави в Google Calendar
+        </a>
+    </section>
+
+    <footer>
+        <p>Направено и организирано с любов &bull; 2026</p>
+    </footer>
+
+</body>
+</html>
