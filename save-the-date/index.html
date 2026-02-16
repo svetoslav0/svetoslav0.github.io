@@ -12,6 +12,16 @@
             font-family: 'BadScript'; 
             src: url('fonts/bad-script.ttf') format('truetype');
         }
+
+        .hide-on-mobile {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .hide-on-mobile {
+                display: inline-block;
+            }
+        }
         
         html, body {
             text-align: center;
@@ -72,11 +82,16 @@
             margin-top: 28px;
         }
 
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body>
-    <h1>--------&nbsp;&nbsp;Save the date&nbsp;&nbsp;--------</h1>
+    <h1> <span class="hide-on-mobile">--------</span> &nbsp;&nbsp;Save the date&nbsp;&nbsp; <span class="hide-on-mobile">--------</span> </h1>
 
     <div class="img">
         <img src="img/Layer_1.svg" alt="heading">
