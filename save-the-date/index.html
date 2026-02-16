@@ -13,14 +13,9 @@
             src: url('fonts/bad-script.ttf') format('truetype');
         }
 
-        .hide-on-mobile {
-            display: none;
-        }
-
-        @media (min-width: 768px) {
-            .hide-on-mobile {
-                display: inline-block;
-            }
+        .img {
+            max-width: 70%;
+            margin: 0 auto;
         }
         
         html, body {
@@ -31,7 +26,7 @@
             font-family: "Homemade Apple", cursive;
             font-weight: 400;
             font-style: normal;
-            font-size: 36px;
+            font-size: 20px;
             text-align: center;
         }
 
@@ -42,8 +37,8 @@
         p {
             font-family: 'BadScript', sans-serif;
             font-weight: 400;
-            font-size: 21px;
-            line-height: 1.6;
+            font-size: 16px;
+            line-height: 1.7;
         }
 
         .text {
@@ -59,7 +54,7 @@
             padding: 15px;
             font-family: "Raleway", sans-serif;
             font-weight: 400;
-            font-size: 16px;
+            font-size: 14px;
             color: #fff;
             text-decoration: none;
             transition: all 0.3s;
@@ -87,11 +82,24 @@
             height: auto;
         }
 
+        @media (min-width: 768px) {
+            h1, h2 {
+                font-size: 36px;
+            }
+
+            p {
+                font-size: 21px;
+            }
+
+            a {
+                font-size: 16px;
+            }
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body>
-    <h1> <span class="hide-on-mobile">--------</span> &nbsp;&nbsp;Save the date&nbsp;&nbsp; <span class="hide-on-mobile">--------</span> </h1>
+    <h1>--------&nbsp;&nbsp;Save the date&nbsp;&nbsp;--------</h1>
 
     <div class="img">
         <img src="img/Layer_1.svg" alt="heading">
@@ -104,14 +112,12 @@
             Подготовката за нашия специален ден вече започна!
             Очаквайте скоро официална покана с повече подробности
             и информация за локацията.
+        </p>
+        <p>
+
             Дотогава – отбележете си датата в календара!
         </p>
     </div>
-
-    <!-- <button>
-        <i class="fa-regular fa-calendar"></i>
-        Запази в Google Calendar
-    </button> -->
 
     <div class="calendar-btn">
         <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Сватбата+на+Ани+и+Светльо&dates=20261024T050000Z/20261025T020000Z" 
