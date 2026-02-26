@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Джам Елка</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        #results {
+            display: none;
+        }
+
+        h1 {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #2c3e50;
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 40px auto;
+            padding-bottom: 15px;
+            position: relative;
+            width: fit-content;
+        }
+
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 4px;
+            background-color: #3498db;
+            border-radius: 2px;
+        }
+
+        /* Основен контейнер на калкулатора */
+        .calculator-container {
+            max-width: 450px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); /* Мека сянка за дълбочина */
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #2c3e50;
+        }
+
+        /* Секция с полета за въвеждане */
+        .input-section {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-group label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .input-group input {
+            padding: 12px;
+            font-size: 1rem;
+            border: 2px solid #e0e6ed;
+            border-radius: 6px;
+            transition: border-color 0.3s ease;
+        }
+
+        /* Ефект при кликване в полето */
+        .input-group input:focus {
+            outline: none;
+            border-color: #3498db; 
+        }
+
+        /* Бутон */
+        .calc-btn {
+            width: 100%;
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            padding: 14px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+        }
+
+        .calc-btn:hover {
+            background-color: #2980b9; /* По-тъмно синьо при посочване */
+        }
+
+        .calc-btn:active {
+            transform: scale(0.98); /* Ефект на "хлътване" при клик */
+        }
+
+        /* Секция за резултатите */
+        .results-section {
+            margin-top: 25px;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #3498db; /* Визуален акцент, свързващ със заглавието */
+        }
+
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e6ed;
+        }
+
+        .result-item:last-child {
+            border-bottom: none; /* Премахва излишната линия под последния резултат */
+        }
+
+        .result-label {
+            font-weight: 600;
+            color: #556b82;
+        }
+
+        .result-value {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <h1>Джам елка</h1>
+
+    <div class="calculator-container">
+    
+        <div class="input-section">
+            <div class="input-group">
+                <label for="biggerSide">Голяма страна:</label>
+                <input type="number" id="biggerSide" placeholder="Въведи размер..." />
+            </div>
+            <div class="input-group">
+                <label for="smallerSide">Малка страна:</label>
+                <input type="number" id="smallerSide" placeholder="Въведи размер..." />
+            </div>
+            <div class="input-group">
+                <label for="middleSide">Средна страна:</label>
+                <input type="number" id="middleSide" placeholder="Въведи размер..." />
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button class="calc-btn" onclick="handleOnClick()">Мастика!</button>
+        </div>
+
+        <div id="results" class="results-section">
+            <div class="result-item">
+                <span class="result-label">Остър ъгъл:</span>
+                <span id="sharpAngle" class="result-value">-</span>
+            </div>
+            <div class="result-item">
+                <span class="result-label">Аптал ъгъл:</span>
+                <span id="obtuseAngle" class="result-value">-</span>
+            </div>
+            <div class="result-item">
+                <span class="result-label">Баир страна:</span>
+                <span id="inclinedSide" class="result-value">-</span>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function handleOnClick() {
+            const biggerSide = document.getElementById("biggerSide").value;
+            const smallerSide = document.getElementById("smallerSide").value;
+            const middleSide = document.getElementById("middleSide").value;
+
+            if (biggerSide == null || biggerSide == 0) {
+                alert("Въведи Голяма страна!");
+                return;
+            }
+            if (smallerSide == null || smallerSide == 0) {
+                alert("Въведи Малка страна!");
+                return;
+            }
+            if (middleSide == null || middleSide == 0) {
+                alert("Въведи Средна страна!");
+                return;
+            }
+
+
+            const remaining = Math.abs(biggerSide - smallerSide);
+            const topSide = Math.sqrt(remaining ** 2 + middleSide ** 2);
+
+            const sinValue = middleSide / topSide;
+            const mainDegrees = Math.asin(sinValue) * 180 / Math.PI;
+            const secondaryDegrees = 180 - mainDegrees;
+
+            const mainDegreeToShow = (Math.round(mainDegrees * 100) / 100).toFixed(2);
+            const secondaryDegreeToShow = (Math.round(secondaryDegrees * 100) / 100).toFixed(2);
+            const topSideToSide = (Math.round(topSide * 100) / 100).toFixed(2);
+            `${secondaryDegreeToShow}&deg;`;
+            document.getElementById("sharpAngle").innerHTML = `${mainDegreeToShow}&deg;`;
+            document.getElementById("obtuseAngle").innerHTML = `${secondaryDegreeToShow}&deg;`;
+            document.getElementById("inclinedSide").innerHTML = topSideToSide;
+
+            document.getElementById("results").style.display = 'block';
+        }
+    </script>
+</body>
+</html>
