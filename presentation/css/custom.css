@@ -5,6 +5,12 @@
   --ohis-muted: #5c6b7a;
   --ohis-light: #f4f8fb;
   --solution-shift: 11vh;
+  /* Базови размери за четливост от разстояние (2–3 м) */
+  --font-content: 36px;
+  --font-content-dense: 34px;
+  --font-dark-slide: 36px;
+  --font-tech: 38px;
+  --font-solution: 38px;
 }
 
 .reveal {
@@ -27,7 +33,7 @@
   align-items: stretch;
   box-sizing: border-box;
   height: 100%;
-  padding: 1.25rem 2.5rem !important;
+  padding: 0.9rem 2rem !important;
   overflow: hidden;
 }
 
@@ -48,7 +54,7 @@
 /* --- Титулен слайд (тъмна тема с ЕКГ линия) --- */
 .reveal .slides > section.title-slide {
   text-align: left;
-  font-size: 24px;
+  font-size: var(--font-dark-slide);
   justify-content: flex-start;
   align-items: stretch;
   gap: 0;
@@ -84,7 +90,7 @@
 }
 
 .reveal .title-slide .title-university {
-  font-size: 0.52em;
+  font-size: 0.58em;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -92,16 +98,16 @@
 }
 
 .reveal .title-slide .title-label {
-  margin-top: 0.9em;
-  font-size: 0.5em;
+  margin-top: 0.75em;
+  font-size: 0.56em;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.75);
 }
 
 .reveal .title-slide h1 {
-  margin: 0.85em 0 0 !important;
-  font-size: 1.28em !important;
+  margin: 0.7em 0 0 !important;
+  font-size: 1.22em !important;
   font-weight: 700;
   line-height: 1.3;
   color: #ffffff;
@@ -109,21 +115,21 @@
 }
 
 .reveal .title-slide .title-tagline {
-  margin-top: 1.3em;
-  font-size: 0.6em;
+  margin-top: 1em;
+  font-size: 0.66em;
   font-style: italic;
   color: var(--ohis-accent);
 }
 
 .reveal .title-slide .title-divider {
   width: 100%;
-  margin: 1.6em 0 1.3em;
+  margin: 1.2em 0 1em;
   border: none;
   border-top: 1px solid rgba(255, 255, 255, 0.22);
 }
 
 .reveal .title-slide .title-meta {
-  font-size: 0.55em;
+  font-size: 0.62em;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.78);
 }
@@ -142,7 +148,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 24px;
+  font-size: var(--font-dark-slide);
   color: #ffffff;
   padding: 1.25rem 0 !important;
 }
@@ -163,12 +169,12 @@
 }
 
 .reveal .closing-slide .closing-quote {
-  margin: 1.2em auto 0;
-  max-width: 78%;
+  margin: 1em auto 0;
+  max-width: 82%;
   border: none;
   background: none;
   box-shadow: none;
-  font-size: 0.78em;
+  font-size: 0.88em;
   font-style: italic;
   font-weight: 600;
   line-height: 1.65;
@@ -176,8 +182,8 @@
 }
 
 .reveal .closing-slide .closing-thanks {
-  margin: 1.4em 0 0;
-  font-size: 0.78em;
+  margin: 1.1em 0 0;
+  font-size: 0.88em;
   font-weight: 700;
   letter-spacing: 0.28em;
   text-transform: uppercase;
@@ -199,8 +205,8 @@
 }
 
 .reveal .closing-slide .closing-footer {
-  margin: 0.9em 0 0;
-  font-size: 0.5em;
+  margin: 0.75em 0 0;
+  font-size: 0.58em;
   color: rgba(255, 255, 255, 0.65);
 }
 
@@ -209,7 +215,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 24px;
+  font-size: var(--font-dark-slide);
   color: #ffffff;
 }
 
@@ -232,8 +238,8 @@
 }
 
 .reveal .demo-slide .demo-label {
-  margin: 1.4em 0 0;
-  font-size: 0.52em;
+  margin: 1.1em 0 0;
+  font-size: 0.6em;
   font-weight: 700;
   letter-spacing: 0.3em;
   text-transform: uppercase;
@@ -241,15 +247,15 @@
 }
 
 .reveal .demo-slide .demo-title {
-  margin: 0.35em 0 0 !important;
-  font-size: 1.7em !important;
+  margin: 0.3em 0 0 !important;
+  font-size: 1.55em !important;
   font-weight: 700;
   color: #ffffff;
 }
 
 .reveal .demo-slide .demo-subtitle {
-  margin: 0.9em 0 0;
-  font-size: 0.66em;
+  margin: 0.75em 0 0;
+  font-size: 0.74em;
   color: rgba(255, 255, 255, 0.75);
 }
 
@@ -257,17 +263,17 @@
 .reveal .dummy-slide,
 .reveal .solution-slide.layout-content {
   justify-content: flex-start;
-  font-size: 24px;
+  font-size: var(--font-content);
   text-align: left;
 }
 
 .reveal .dummy-slide h2,
 .reveal .solution-slide.layout-content h2 {
-  font-size: 1em !important;
-  line-height: 1.25;
+  font-size: 1.05em !important;
+  line-height: 1.2;
   border-bottom: 3px solid var(--ohis-accent);
-  padding-bottom: 0.2em;
-  margin: 0 0 0.5em !important;
+  padding-bottom: 0.15em;
+  margin: 0 0 0.4em !important;
   flex-shrink: 0;
   max-width: 100%;
   text-align: left;
@@ -286,9 +292,9 @@
 .reveal .icon-list {
   list-style: none;
   padding: 0;
-  margin: 0.35em 0 0;
-  font-size: 0.78em;
-  line-height: 1.4;
+  margin: 0.25em 0 0;
+  font-size: 0.84em;
+  line-height: 1.35;
   flex: 1;
   min-height: 0;
   text-align: left;
@@ -298,9 +304,9 @@
 .reveal .icon-list li {
   display: flex;
   align-items: center;
-  gap: 0.85em;
-  margin-bottom: 0.65em;
-  padding: 0.45em 0;
+  gap: 0.75em;
+  margin-bottom: 0.5em;
+  padding: 0.35em 0;
 }
 
 .reveal .icon-list li:last-child {
@@ -312,8 +318,8 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 2.35em;
-  height: 2.35em;
+  width: 2.15em;
+  height: 2.15em;
   border-radius: 50%;
   background: var(--ohis-teal);
   color: #ffffff;
@@ -333,7 +339,7 @@
 .reveal .icon-slide .icon-slide-body {
   display: flex;
   align-items: flex-start;
-  gap: 1.25em;
+  gap: 1em;
   flex: 1;
   min-height: 0;
   margin-top: 0.15em;
@@ -359,7 +365,7 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: repeat(2, minmax(0, 1fr));
-  gap: 0.65em;
+  gap: 0.55em;
   flex: 0 0 0;
   max-width: 0;
   min-width: 0;
@@ -383,12 +389,12 @@
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  padding: 0.7em 0.55em 0.65em;
+  padding: 0.5em 0.4em 0.45em;
   border-radius: 12px;
   overflow: hidden;
   color: #ffffff;
   box-shadow: 0 4px 14px rgba(13, 59, 102, 0.18);
-  min-height: 9em;
+  min-height: 7em;
 }
 
 .reveal .icon-slide .role-card--admin {
@@ -413,40 +419,44 @@
   justify-content: center;
   flex: 1 1 auto;
   width: 100%;
-  min-height: 4.8em;
+  min-height: 3.2em;
   color: #ffffff;
 }
 
 .reveal .icon-slide .role-card__icon svg {
-  width: 4.2em;
-  height: 4.2em;
-  max-width: 75%;
-  max-height: 5em;
+  width: 3.2em;
+  height: 3.2em;
+  max-width: 72%;
+  max-height: 3.6em;
 }
 
 .reveal .icon-slide .role-card__title {
-  margin: 0.35em 0 0.2em;
-  font-size: 0.54em;
+  margin: 0.25em 0 0.15em;
+  font-size: 0.64em;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.15;
   color: #ffffff;
   flex-shrink: 0;
 }
 
 .reveal .icon-slide .role-card__desc {
   margin: 0;
-  font-size: 0.42em;
-  line-height: 1.3;
+  font-size: 0.52em;
+  line-height: 1.25;
   color: rgba(255, 255, 255, 0.92);
   flex-shrink: 0;
 }
 
 /* --- Слайд „Проблемът“ 2.1: хартиеният процес днес --- */
+.reveal .workflow-slide {
+  font-size: var(--font-content);
+}
+
 .reveal .workflow-slide .workflow-intro {
   align-self: flex-start;
-  margin: 0.1em 0 0.65em;
-  padding: 0.35em 0.8em;
-  font-size: 0.82em;
+  margin: 0.05em 0 0.5em;
+  padding: 0.3em 0.7em;
+  font-size: 0.88em;
   font-weight: 600;
   color: var(--ohis-navy);
   background: var(--ohis-light);
@@ -459,7 +469,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0.3em;
+  gap: 0.2em;
   flex: 1;
   min-height: 0;
 }
@@ -467,7 +477,7 @@
 .reveal .workflow-slide .workflow__row {
   display: flex;
   align-items: stretch;
-  gap: 0.4em;
+  gap: 0.3em;
 }
 
 .reveal .workflow-slide .workflow__row--reverse {
@@ -483,8 +493,8 @@
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  gap: 0.3em;
-  padding: 0.75em 0.55em 0.6em;
+  gap: 0.25em;
+  padding: 0.6em 0.45em 0.5em;
   background: #ffffff;
   border: 1.5px solid rgba(26, 127, 142, 0.35);
   border-radius: 12px;
@@ -511,8 +521,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2em;
-  height: 2em;
+  width: 1.85em;
+  height: 1.85em;
   border-radius: 50%;
   background: var(--ohis-light);
   color: var(--ohis-teal);
@@ -525,8 +535,8 @@
 
 .reveal .workflow-slide .workflow-step p {
   margin: 0;
-  font-size: 0.5em;
-  line-height: 1.3;
+  font-size: 0.7em;
+  line-height: 1.22;
   color: var(--ohis-navy);
 }
 
@@ -559,7 +569,7 @@
 .reveal .gaps-slide .gap-cards {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1em;
+  gap: 0.8em;
   flex: 1;
   min-height: 0;
   align-content: center;
@@ -568,8 +578,8 @@
 .reveal .gaps-slide .gap-card {
   display: flex;
   flex-direction: column;
-  gap: 0.55em;
-  padding: 0.8em 0.9em 0.9em;
+  gap: 0.45em;
+  padding: 0.65em 0.75em 0.75em;
   background: #ffffff;
   border: 1.5px solid rgba(26, 127, 142, 0.3);
   border-radius: 14px;
@@ -603,9 +613,9 @@
 
 .reveal .gaps-slide .gap-card__header h3 {
   margin: 0;
-  font-size: 0.68em;
+  font-size: 0.76em;
   font-weight: 600;
-  line-height: 1.25;
+  line-height: 1.2;
 }
 
 .reveal .gaps-slide .gap-card__row {
@@ -629,7 +639,7 @@
 .reveal .gaps-slide .gap-card__label {
   flex-shrink: 0;
   min-width: 3.2em;
-  font-size: 0.44em;
+  font-size: 0.5em;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -647,17 +657,17 @@
 
 .reveal .gaps-slide .gap-card__row p {
   margin: 0;
-  font-size: 0.54em;
-  line-height: 1.4;
+  font-size: 0.64em;
+  line-height: 1.35;
   color: var(--ohis-navy);
 }
 
 /* --- Слайд „Пилотно изпитване“ --- */
 .reveal .pilot-slide .pilot-intro {
   align-self: flex-start;
-  margin: 0.1em 0 0.7em;
-  padding: 0.35em 0.8em;
-  font-size: 0.82em;
+  margin: 0.05em 0 0.55em;
+  padding: 0.3em 0.7em;
+  font-size: 0.88em;
   font-weight: 600;
   color: var(--ohis-navy);
   background: var(--ohis-light);
@@ -669,7 +679,7 @@
 .reveal .pilot-slide .pilot-points {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 0.6em;
+  gap: 0.45em;
   flex: 1;
   min-height: 0;
   align-content: center;
@@ -680,8 +690,8 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 0.45em;
-  padding: 0.8em 0.5em;
+  gap: 0.35em;
+  padding: 0.6em 0.4em;
   background: #ffffff;
   border: 1.5px solid rgba(26, 127, 142, 0.3);
   border-radius: 12px;
@@ -707,17 +717,17 @@
 
 .reveal .pilot-slide .pilot-point p {
   margin: 0;
-  font-size: 0.5em;
-  line-height: 1.35;
+  font-size: 0.66em;
+  line-height: 1.3;
   color: var(--ohis-navy);
 }
 
 .reveal .pilot-slide .pilot-conclusion {
   display: flex;
   align-items: center;
-  gap: 0.7em;
-  margin-top: 0.7em;
-  padding: 0.7em 1em;
+  gap: 0.6em;
+  margin-top: 0.55em;
+  padding: 0.6em 0.85em;
   border-radius: 14px;
   background: linear-gradient(100deg, var(--ohis-navy), var(--ohis-teal));
   color: #ffffff;
@@ -742,8 +752,8 @@
 
 .reveal .pilot-slide .pilot-conclusion p {
   margin: 0;
-  font-size: 0.66em;
-  line-height: 1.4;
+  font-size: 0.74em;
+  line-height: 1.35;
 }
 
 .reveal .pilot-slide .pilot-conclusion strong {
@@ -753,13 +763,13 @@
 
 /* --- Слайд „Технологични инструменти“ --- */
 .reveal .tech-slide {
-  font-size: 30px;
+  font-size: var(--font-tech);
 }
 
 .reveal .tech-slide .tech-cards {
   display: flex;
   flex-direction: column;
-  gap: 0.8em;
+  gap: 0.6em;
   flex: 1;
   min-height: 0;
   margin-top: 0.1em;
@@ -769,7 +779,7 @@
 .reveal .tech-slide .tech-cards__row {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.7em;
+  gap: 0.55em;
   align-items: stretch;
 }
 
@@ -779,7 +789,7 @@
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  padding: 0.9em 0.5em 0.95em;
+  padding: 0.7em 0.4em 0.75em;
   border-radius: 14px;
   overflow: hidden;
   color: #ffffff;
@@ -817,10 +827,10 @@
 }
 
 .reveal .tech-slide .tech-card__title {
-  margin: 0.5em 0 0.3em;
-  font-size: 0.58em;
+  margin: 0.4em 0 0.2em;
+  font-size: 0.66em;
   font-weight: 600;
-  line-height: 1.22;
+  line-height: 1.18;
   color: #ffffff;
   text-transform: none;
   letter-spacing: 0;
@@ -828,8 +838,8 @@
 
 .reveal .tech-slide .tech-card__desc {
   margin: 0;
-  font-size: 0.5em;
-  line-height: 1.35;
+  font-size: 0.58em;
+  line-height: 1.3;
   color: rgba(255, 255, 255, 0.92);
 }
 
@@ -837,7 +847,7 @@
 .reveal .solution-slide {
   justify-content: center;
   align-items: center;
-  font-size: 28px;
+  font-size: var(--font-solution);
   text-align: center;
 }
 
@@ -876,7 +886,7 @@
 }
 
 .reveal .solution-slide h2 {
-  font-size: 1.25em !important;
+  font-size: 1.15em !important;
   line-height: 1.2;
   margin: 0 !important;
   max-width: 92%;
@@ -896,8 +906,8 @@
 }
 
 .reveal .solution-slide .solution-answer {
-  margin: 0.65em auto 0;
-  font-size: 0.68em;
+  margin: 0.55em auto 0;
+  font-size: 0.76em;
   line-height: 1.35;
   color: var(--ohis-teal);
   max-width: 88%;
@@ -910,8 +920,8 @@
 }
 
 .reveal .solution-slide.layout-content .solution-answer {
-  margin: 0 0 0.45em;
-  font-size: 0.72em;
+  margin: 0 0 0.35em;
+  font-size: 0.8em;
   color: var(--ohis-muted);
   max-width: 100%;
 }
@@ -922,16 +932,21 @@
 }
 
 .reveal .solution-slide:not(.layout-content) .solution-benefits.icon-list {
-  font-size: 0.5em;
+  font-size: 0.58em;
 }
 
 .reveal .solution-slide.layout-content .solution-benefits.icon-list {
-  font-size: 0.78em;
+  font-size: 0.84em;
   max-width: 100%;
 }
 
 .reveal .progress span {
   background: var(--ohis-teal);
+}
+
+.reveal .slide-number,
+.reveal .slide-number a {
+  font-size: 18px;
 }
 
 .reveal .controls button {
