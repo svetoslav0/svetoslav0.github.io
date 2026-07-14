@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img">
+  <title>Entity Framework Core</title>
+  <path fill-rule="evenodd" d="M12 1.1 21.45 6.55v10.9L12 22.9 2.55 17.45V6.55Zm0 2.08L4.35 7.59v8.82L12 20.82l7.65-4.41V7.59Z"/>
+  <text x="12" y="15.6" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="8.6" font-weight="700">EF</text>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img">
+  <title>QuestPDF</title>
+  <path d="M14.5 1.5H6a2 2 0 0 0-2 2v17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" fill="none" stroke="#000" stroke-width="1.7" stroke-linejoin="round"/>
+  <path d="M14.5 1.5V7H20" fill="none" stroke="#000" stroke-width="1.7" stroke-linejoin="round"/>
+  <text x="12" y="17.3" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="6" font-weight="700">PDF</text>
+</svg>

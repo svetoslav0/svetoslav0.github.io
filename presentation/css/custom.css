@@ -1,0 +1,947 @@
+:root {
+  --ohis-navy: #0d3b66;
+  --ohis-teal: #1a7f8e;
+  --ohis-accent: #2ec4b6;
+  --ohis-muted: #5c6b7a;
+  --ohis-light: #f4f8fb;
+  --solution-shift: 11vh;
+}
+
+.reveal {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color: var(--ohis-navy);
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+/* Всеки слайд: flex колона в рамките на 1280×720, без изтичане
+   (:not(.stack) пропуска обвивката на вертикалните групи, а
+   вторият селектор хваща вложените вертикални слайдове) */
+.reveal .slides > section:not(.stack),
+.reveal .slides > section > section {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 1.25rem 2.5rem !important;
+  overflow: hidden;
+}
+
+.reveal .slides > section.stack {
+  height: 100%;
+  padding: 0 !important;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  color: var(--ohis-navy);
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* --- Титулен слайд (тъмна тема с ЕКГ линия) --- */
+.reveal .slides > section.title-slide {
+  text-align: left;
+  font-size: 24px;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 0;
+  padding: 0 !important;
+  color: #ffffff;
+}
+
+.reveal .title-slide .title-ecg {
+  flex-shrink: 0;
+  height: 17%;
+  margin: 2.5% 2% 0;
+  color: var(--ohis-accent);
+}
+
+.reveal .title-slide .title-ecg svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.reveal .title-slide .title-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 0;
+  padding: 0 6% 4%;
+}
+
+.reveal .title-slide .title-content > * {
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.reveal .title-slide .title-university {
+  font-size: 0.52em;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ohis-accent);
+}
+
+.reveal .title-slide .title-label {
+  margin-top: 0.9em;
+  font-size: 0.5em;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.reveal .title-slide h1 {
+  margin: 0.85em 0 0 !important;
+  font-size: 1.28em !important;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #ffffff;
+  max-width: 96%;
+}
+
+.reveal .title-slide .title-tagline {
+  margin-top: 1.3em;
+  font-size: 0.6em;
+  font-style: italic;
+  color: var(--ohis-accent);
+}
+
+.reveal .title-slide .title-divider {
+  width: 100%;
+  margin: 1.6em 0 1.3em;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.reveal .title-slide .title-meta {
+  font-size: 0.55em;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.reveal .title-slide .title-meta + .title-meta {
+  margin-top: 0.5em;
+}
+
+.reveal .title-slide .title-meta strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* --- Финален слайд --- */
+.reveal .slides > section.closing-slide {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 24px;
+  color: #ffffff;
+  padding: 1.25rem 0 !important;
+}
+
+.reveal .closing-slide .closing-heart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6em;
+  height: 2.6em;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.reveal .closing-slide .closing-heart svg {
+  width: 100%;
+  height: 100%;
+}
+
+.reveal .closing-slide .closing-quote {
+  margin: 1.2em auto 0;
+  max-width: 78%;
+  border: none;
+  background: none;
+  box-shadow: none;
+  font-size: 0.78em;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.65;
+  color: #ffffff;
+}
+
+.reveal .closing-slide .closing-thanks {
+  margin: 1.4em 0 0;
+  font-size: 0.78em;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ohis-accent);
+}
+
+.reveal .closing-slide .closing-ecg {
+  width: 100%;
+  height: 15%;
+  margin-top: 1.2em;
+  color: var(--ohis-accent);
+  flex-shrink: 0;
+}
+
+.reveal .closing-slide .closing-ecg svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.reveal .closing-slide .closing-footer {
+  margin: 0.9em 0 0;
+  font-size: 0.5em;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* --- Демо слайд --- */
+.reveal .slides > section.demo-slide {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.reveal .demo-slide .demo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.4em;
+  height: 3.4em;
+  border-radius: 50%;
+  background: rgba(46, 196, 182, 0.12);
+  border: 1.5px solid rgba(46, 196, 182, 0.45);
+  color: var(--ohis-accent);
+  flex-shrink: 0;
+}
+
+.reveal .demo-slide .demo-icon svg {
+  width: 55%;
+  height: 55%;
+}
+
+.reveal .demo-slide .demo-label {
+  margin: 1.4em 0 0;
+  font-size: 0.52em;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ohis-accent);
+}
+
+.reveal .demo-slide .demo-title {
+  margin: 0.35em 0 0 !important;
+  font-size: 1.7em !important;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.reveal .demo-slide .demo-subtitle {
+  margin: 0.9em 0 0;
+  font-size: 0.66em;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* --- Съдържателни слайдове (общ стил) --- */
+.reveal .dummy-slide,
+.reveal .solution-slide.layout-content {
+  justify-content: flex-start;
+  font-size: 24px;
+  text-align: left;
+}
+
+.reveal .dummy-slide h2,
+.reveal .solution-slide.layout-content h2 {
+  font-size: 1em !important;
+  line-height: 1.25;
+  border-bottom: 3px solid var(--ohis-accent);
+  padding-bottom: 0.2em;
+  margin: 0 0 0.5em !important;
+  flex-shrink: 0;
+  max-width: 100%;
+  text-align: left;
+}
+
+.reveal .dummy-slide .placeholder {
+  background: var(--ohis-light);
+  border-left: 4px solid var(--ohis-teal);
+  padding: 0.75em 1em;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.78em;
+  color: var(--ohis-muted);
+}
+
+/* --- Споделен стил за bullet-и с иконки --- */
+.reveal .icon-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.35em 0 0;
+  font-size: 0.78em;
+  line-height: 1.4;
+  flex: 1;
+  min-height: 0;
+  text-align: left;
+  max-width: 100%;
+}
+
+.reveal .icon-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.85em;
+  margin-bottom: 0.65em;
+  padding: 0.45em 0;
+}
+
+.reveal .icon-list li:last-child {
+  margin-bottom: 0;
+}
+
+.reveal .icon-bullet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.35em;
+  height: 2.35em;
+  border-radius: 50%;
+  background: var(--ohis-teal);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(13, 59, 102, 0.12);
+}
+
+.reveal .icon-bullet svg {
+  width: 1.35em;
+  height: 1.35em;
+}
+
+.reveal .icon-list li span:last-child {
+  line-height: 1.35;
+}
+
+/* --- Слайд с иконки --- */
+.reveal .icon-slide .icon-slide-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25em;
+  flex: 1;
+  min-height: 0;
+  margin-top: 0.15em;
+}
+
+.reveal .icon-slide.roles-visible .icon-slide-body {
+  overflow: visible;
+}
+
+.reveal .icon-slide .icon-list {
+  margin: 0;
+  transition:
+    flex 0.6s ease,
+    max-width 0.6s ease;
+}
+
+.reveal .icon-slide.roles-visible .icon-list {
+  flex: 0.75;
+  max-width: 36%;
+}
+
+.reveal .icon-slide .role-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 0.65em;
+  flex: 0 0 0;
+  max-width: 0;
+  min-width: 0;
+  overflow: hidden;
+  align-self: flex-start;
+  align-items: stretch;
+  transition:
+    flex 0.6s ease,
+    max-width 0.6s ease;
+}
+
+.reveal .icon-slide .role-cards.visible {
+  flex: 1.35;
+  max-width: 62%;
+  overflow: visible;
+}
+
+.reveal .icon-slide .role-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 0.7em 0.55em 0.65em;
+  border-radius: 12px;
+  overflow: hidden;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(13, 59, 102, 0.18);
+  min-height: 9em;
+}
+
+.reveal .icon-slide .role-card--admin {
+  background: #0d3b66;
+}
+
+.reveal .icon-slide .role-card--manager {
+  background: #1a4d6e;
+}
+
+.reveal .icon-slide .role-card--doctor {
+  background: #146b7a;
+}
+
+.reveal .icon-slide .role-card--reception {
+  background: #0f5c5c;
+}
+
+.reveal .icon-slide .role-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  width: 100%;
+  min-height: 4.8em;
+  color: #ffffff;
+}
+
+.reveal .icon-slide .role-card__icon svg {
+  width: 4.2em;
+  height: 4.2em;
+  max-width: 75%;
+  max-height: 5em;
+}
+
+.reveal .icon-slide .role-card__title {
+  margin: 0.35em 0 0.2em;
+  font-size: 0.54em;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.reveal .icon-slide .role-card__desc {
+  margin: 0;
+  font-size: 0.42em;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.92);
+  flex-shrink: 0;
+}
+
+/* --- Слайд „Проблемът“ 2.1: хартиеният процес днес --- */
+.reveal .workflow-slide .workflow-intro {
+  align-self: flex-start;
+  margin: 0.1em 0 0.65em;
+  padding: 0.35em 0.8em;
+  font-size: 0.82em;
+  font-weight: 600;
+  color: var(--ohis-navy);
+  background: var(--ohis-light);
+  border-left: 4px solid var(--ohis-accent);
+  border-radius: 0 8px 8px 0;
+  flex-shrink: 0;
+}
+
+.reveal .workflow-slide .workflow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3em;
+  flex: 1;
+  min-height: 0;
+}
+
+.reveal .workflow-slide .workflow__row {
+  display: flex;
+  align-items: stretch;
+  gap: 0.4em;
+}
+
+.reveal .workflow-slide .workflow__row--reverse {
+  flex-direction: row-reverse;
+}
+
+.reveal .workflow-slide .workflow-step {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  gap: 0.3em;
+  padding: 0.75em 0.55em 0.6em;
+  background: #ffffff;
+  border: 1.5px solid rgba(26, 127, 142, 0.35);
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(13, 59, 102, 0.1);
+}
+
+.reveal .workflow-slide .workflow-step__num {
+  position: absolute;
+  top: -0.55em;
+  left: -0.35em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background: var(--ohis-teal);
+  color: #ffffff;
+  font-size: 0.55em;
+  font-weight: 700;
+}
+
+.reveal .workflow-slide .workflow-step__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background: var(--ohis-light);
+  color: var(--ohis-teal);
+}
+
+.reveal .workflow-slide .workflow-step__icon svg {
+  width: 1.15em;
+  height: 1.15em;
+}
+
+.reveal .workflow-slide .workflow-step p {
+  margin: 0;
+  font-size: 0.5em;
+  line-height: 1.3;
+  color: var(--ohis-navy);
+}
+
+.reveal .workflow-slide .workflow-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  color: var(--ohis-accent);
+}
+
+.reveal .workflow-slide .workflow-arrow svg {
+  width: 1.1em;
+  height: 1.1em;
+}
+
+.reveal .workflow-slide .workflow__turn {
+  display: flex;
+  justify-content: flex-end;
+  color: var(--ohis-accent);
+}
+
+.reveal .workflow-slide .workflow__turn svg {
+  width: 1.1em;
+  height: 1.1em;
+  margin-right: calc(16.5% - 0.55em);
+}
+
+/* --- Слайд „Какво не е направено“ --- */
+.reveal .gaps-slide .gap-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1em;
+  flex: 1;
+  min-height: 0;
+  align-content: center;
+}
+
+.reveal .gaps-slide .gap-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55em;
+  padding: 0.8em 0.9em 0.9em;
+  background: #ffffff;
+  border: 1.5px solid rgba(26, 127, 142, 0.3);
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(13, 59, 102, 0.12);
+}
+
+.reveal .gaps-slide .gap-card__header {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding-bottom: 0.4em;
+  border-bottom: 2px solid var(--ohis-light);
+}
+
+.reveal .gaps-slide .gap-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 1.9em;
+  height: 1.9em;
+  border-radius: 10px;
+  background: var(--ohis-navy);
+  color: #ffffff;
+}
+
+.reveal .gaps-slide .gap-card__icon svg {
+  width: 1.1em;
+  height: 1.1em;
+}
+
+.reveal .gaps-slide .gap-card__header h3 {
+  margin: 0;
+  font-size: 0.68em;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.reveal .gaps-slide .gap-card__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55em;
+  padding: 0.5em 0.6em;
+  border-radius: 10px;
+}
+
+.reveal .gaps-slide .gap-card__row--now {
+  background: #fdf3ec;
+  border-left: 4px solid #e07a3f;
+}
+
+.reveal .gaps-slide .gap-card__row--next {
+  background: #eef7f4;
+  border-left: 4px solid var(--ohis-accent);
+}
+
+.reveal .gaps-slide .gap-card__label {
+  flex-shrink: 0;
+  min-width: 3.2em;
+  font-size: 0.44em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.3;
+  padding-top: 0.25em;
+}
+
+.reveal .gaps-slide .gap-card__row--now .gap-card__label {
+  color: #b45a24;
+}
+
+.reveal .gaps-slide .gap-card__row--next .gap-card__label {
+  color: var(--ohis-teal);
+}
+
+.reveal .gaps-slide .gap-card__row p {
+  margin: 0;
+  font-size: 0.54em;
+  line-height: 1.4;
+  color: var(--ohis-navy);
+}
+
+/* --- Слайд „Пилотно изпитване“ --- */
+.reveal .pilot-slide .pilot-intro {
+  align-self: flex-start;
+  margin: 0.1em 0 0.7em;
+  padding: 0.35em 0.8em;
+  font-size: 0.82em;
+  font-weight: 600;
+  color: var(--ohis-navy);
+  background: var(--ohis-light);
+  border-left: 4px solid var(--ohis-accent);
+  border-radius: 0 8px 8px 0;
+  flex-shrink: 0;
+}
+
+.reveal .pilot-slide .pilot-points {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.6em;
+  flex: 1;
+  min-height: 0;
+  align-content: center;
+}
+
+.reveal .pilot-slide .pilot-point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.45em;
+  padding: 0.8em 0.5em;
+  background: #ffffff;
+  border: 1.5px solid rgba(26, 127, 142, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(13, 59, 102, 0.1);
+}
+
+.reveal .pilot-slide .pilot-point__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2em;
+  height: 2.2em;
+  border-radius: 50%;
+  background: var(--ohis-light);
+  color: var(--ohis-teal);
+  flex-shrink: 0;
+}
+
+.reveal .pilot-slide .pilot-point__icon svg {
+  width: 1.25em;
+  height: 1.25em;
+}
+
+.reveal .pilot-slide .pilot-point p {
+  margin: 0;
+  font-size: 0.5em;
+  line-height: 1.35;
+  color: var(--ohis-navy);
+}
+
+.reveal .pilot-slide .pilot-conclusion {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  margin-top: 0.7em;
+  padding: 0.7em 1em;
+  border-radius: 14px;
+  background: linear-gradient(100deg, var(--ohis-navy), var(--ohis-teal));
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(13, 59, 102, 0.22);
+  flex-shrink: 0;
+}
+
+.reveal .pilot-slide .pilot-conclusion__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 1.6em;
+  height: 1.6em;
+  color: var(--ohis-accent);
+}
+
+.reveal .pilot-slide .pilot-conclusion__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.reveal .pilot-slide .pilot-conclusion p {
+  margin: 0;
+  font-size: 0.66em;
+  line-height: 1.4;
+}
+
+.reveal .pilot-slide .pilot-conclusion strong {
+  color: var(--ohis-accent);
+  font-weight: 700;
+}
+
+/* --- Слайд „Технологични инструменти“ --- */
+.reveal .tech-slide {
+  font-size: 30px;
+}
+
+.reveal .tech-slide .tech-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  flex: 1;
+  min-height: 0;
+  margin-top: 0.1em;
+  overflow: visible;
+}
+
+.reveal .tech-slide .tech-cards__row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.7em;
+  align-items: stretch;
+}
+
+.reveal .tech-slide .tech-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 0.9em 0.5em 0.95em;
+  border-radius: 14px;
+  overflow: hidden;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(13, 59, 102, 0.18);
+}
+
+.reveal .tech-slide .tech-card--dotnet { background: #0d3b66; }
+.reveal .tech-slide .tech-card--blazor { background: #1a4d6e; }
+.reveal .tech-slide .tech-card--postgres { background: #146b7a; }
+.reveal .tech-slide .tech-card--ef { background: #0f5c5c; }
+.reveal .tech-slide .tech-card--identity { background: #2d4a7a; }
+.reveal .tech-slide .tech-card--fhir { background: #1e5a6b; }
+.reveal .tech-slide .tech-card--questpdf { background: #3d5a80; }
+.reveal .tech-slide .tech-card--docker { background: #0d4f4f; }
+
+.reveal .tech-slide .tech-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  color: #ffffff;
+}
+
+.reveal .tech-slide .tech-card__logo {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.reveal .tech-slide .tech-card--questpdf .tech-card__logo {
+  filter: brightness(0) invert(1);
+}
+
+.reveal .tech-slide .tech-card__title {
+  margin: 0.5em 0 0.3em;
+  font-size: 0.58em;
+  font-weight: 600;
+  line-height: 1.22;
+  color: #ffffff;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.reveal .tech-slide .tech-card__desc {
+  margin: 0;
+  font-size: 0.5em;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* --- Слайд „Решение“ --- */
+.reveal .solution-slide {
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  text-align: center;
+}
+
+.reveal .solution-slide .solution-stage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.reveal .solution-slide.layout-content {
+  align-items: stretch;
+}
+
+.reveal .solution-slide.layout-content .solution-stage {
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.reveal .solution-slide .solution-header {
+  width: 100%;
+  text-align: center;
+  transform: translateY(var(--solution-shift));
+  transition:
+    transform 2s cubic-bezier(0.25, 1, 0.5, 1),
+    text-align 2s ease;
+  will-change: transform;
+}
+
+.reveal .solution-slide.layout-content .solution-header {
+  transform: translateY(0);
+  text-align: left;
+  flex-shrink: 0;
+}
+
+.reveal .solution-slide h2 {
+  font-size: 1.25em !important;
+  line-height: 1.2;
+  margin: 0 !important;
+  max-width: 92%;
+  flex-shrink: 0;
+  border-bottom: 3px solid transparent;
+  padding-bottom: 0;
+  transition:
+    font-size 2s ease,
+    border-color 2s ease,
+    padding-bottom 2s ease,
+    margin-bottom 2s ease,
+    max-width 2s ease;
+}
+
+.reveal .solution-slide.layout-content h2 {
+  margin: 0 0 0.35em !important;
+}
+
+.reveal .solution-slide .solution-answer {
+  margin: 0.65em auto 0;
+  font-size: 0.68em;
+  line-height: 1.35;
+  color: var(--ohis-teal);
+  max-width: 88%;
+  flex-shrink: 0;
+  transition:
+    margin 2s ease,
+    font-size 2s ease,
+    color 2s ease,
+    max-width 2s ease;
+}
+
+.reveal .solution-slide.layout-content .solution-answer {
+  margin: 0 0 0.45em;
+  font-size: 0.72em;
+  color: var(--ohis-muted);
+  max-width: 100%;
+}
+
+.reveal .solution-slide .solution-benefits.icon-list {
+  margin: 0;
+  max-width: 80%;
+}
+
+.reveal .solution-slide:not(.layout-content) .solution-benefits.icon-list {
+  font-size: 0.5em;
+}
+
+.reveal .solution-slide.layout-content .solution-benefits.icon-list {
+  font-size: 0.78em;
+  max-width: 100%;
+}
+
+.reveal .progress span {
+  background: var(--ohis-teal);
+}
+
+.reveal .controls button {
+  color: var(--ohis-teal);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal .solution-slide .solution-header,
+  .reveal .solution-slide h2,
+  .reveal .solution-slide .solution-answer {
+    transition: none;
+  }
+}
