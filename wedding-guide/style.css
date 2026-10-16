@@ -30,8 +30,8 @@
         /* Hero Section */
         .hero {
             height: 50vh;
-            /* background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://placehold.co/1920x1080/4a5d4e/ffffff?text=Romantic+Wedding+Image') no-repeat center center/cover; */
-            background-color: #380303;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('IMG_9002.PNG') no-repeat center center/cover;
+            /* background-color: #380303; */
             display: flex;
             align-items: center;
             justify-content: center;
