@@ -5,6 +5,14 @@
             --text-muted: #6c757d;
         }
 
+        html, body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: var(--bg-color);
@@ -32,6 +40,7 @@
             height: 50vh;
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('IMG_9002.PNG') no-repeat right center/cover;
             /* background-color: #380303; */
+            padding: 4rem 1rem; /* Allows room for content without overflowing */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -154,22 +163,27 @@
 
         /* Media queries for Timeline */
         @media screen and (max-width: 768px) {
-            .timeline::after { left: 31px; }
+            .timeline::after { left: 20px; }
             .timeline-item {
                 width: 100%;
-                padding-left: 70px;
-                padding-right: 25px;
+                padding-left: 50px;
+                padding-right: 15px;
             }
             .timeline-item::after {
-                left: 23px;
+                left: 12px;
             }
             .left::after, .right::after {
-                left: 23px;
+                left: 12px;
             }
             .right { left: 0%; }
-            .hero h1 { font-size: 2.5rem; }
-            .countdown-container { gap: 1rem; }
-            .countdown-number { font-size: 1.8rem; }
+            .hero h1 { font-size: 2.2rem; }
+            .countdown-container { 
+                gap: 0.75rem; 
+                margin-top: 1.5rem;
+            }
+            
+            .countdown-number { font-size: 1.5rem; }
+            .countdown-label { font-size: 0.7rem; }
         }
 
         /* RSVP Section */
