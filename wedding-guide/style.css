@@ -1,0 +1,214 @@
+:root {
+            --primary-color: #380303; /* Sage green */
+            --bg-color: #faf9f7; /* Off-white/cream */
+            --text-main: #333333;
+            --text-muted: #6c757d;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, .wedding-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: rgba(250, 249, 247, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            color: var(--primary-color) !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 50vh;
+            /* background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://placehold.co/1920x1080/4a5d4e/ffffff?text=Romantic+Wedding+Image') no-repeat center center/cover; */
+            background-color: #380303;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        /* Countdown */
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .countdown-number {
+            font-size: 2.5rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+
+        .countdown-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Timeline Section */
+        .timeline-section {
+            padding: 5rem 0;
+            background-color: var(--bg-color);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        /* The vertical line */
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        /* Circles on the timeline */
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            right: -8px;
+            background-color: var(--bg-color);
+            border: 3px solid var(--primary-color);
+            top: 20px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left { left: 0; }
+        .right { left: 50%; }
+        
+        .right::after {
+            left: -8px;
+        }
+
+        .timeline-content {
+            padding: 1.5rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+        }
+
+        .timeline-time {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        /* Media queries for Timeline */
+        @media screen and (max-width: 768px) {
+            .timeline::after { left: 31px; }
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            .timeline-item::after {
+                left: 23px;
+            }
+            .left::after, .right::after {
+                left: 23px;
+            }
+            .right { left: 0%; }
+            .hero h1 { font-size: 2.5rem; }
+            .countdown-container { gap: 1rem; }
+            .countdown-number { font-size: 1.8rem; }
+        }
+
+        /* RSVP Section */
+        .rsvp-section {
+            padding: 5rem 0;
+            background-color: white;
+        }
+
+        .rsvp-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--bg-color);
+            padding: 3rem;
+            border-radius: 12px;
+        }
+
+        .form-control, .form-select {
+            border: 1px solid #ddd;
+            border-radius: 0;
+            padding: 0.8rem;
+            background-color: transparent;
+        }
+        
+        .form-control:focus, .form-select:focus {
+            box-shadow: none;
+            border-color: var(--primary-color);
+            background-color: transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border: none;
+            padding: 10px 30px;
+            border-radius: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #4a5d4e;
+        }

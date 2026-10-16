@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Wedding Day</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand wedding-font" href="#">Ани & Светльо</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container" data-aos="fade-up" data-aos-duration="1500">
+            <h1>Ани & Светльо</h1>
+            <p class="mt-3">24 Октомври 2026 • Варна</p>
+            
+            <div class="countdown-container" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Mins</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Secs</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="timeline-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="wedding-font display-5">Сватбеният ден</h2>
+                <p class="text-muted">Проследете програмата на целия сватбен ден.</p>
+            </div>
+
+            <div class="timeline">
+                
+                <!-- Event 1 -->
+                <div class="timeline-item left" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <div class="timeline-time"><i class="fa-solid fa-clock me-2"></i>08:30</div>
+                        <h4 class="wedding-font">Събиране в дома на Младоженеца</h4>
+                        <a href="https://maps.app.goo.gl/QKkEWUvxURnXGaMS8" class="text-decoration-none small text-success mt-2 d-inline-block"><i class="fa-solid fa-map-pin me-1"></i>Домът на Младоженеца (Приселци, ул. Опълченска 11)</a>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="timeline-item right" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <div class="timeline-time"><i class="fa-solid fa-clock me-2"></i>09:30</div>
+                        <h4 class="wedding-font">Вземане на кумовете</h4>
+                        <a href="https://maps.app.goo.gl/R3H2o6LMRFzFoga58" class="text-decoration-none small text-success mt-2 d-inline-block"><i class="fa-solid fa-map-pin me-1"></i>Домът на Кумовете (Приселци, ул. Лозенград)</a>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="timeline-item left" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <div class="timeline-time"><i class="fa-solid fa-clock me-2"></i>11:30</div>
+                        <h4 class="wedding-font">Вземане на Булката</h4>
+                        <a href="https://maps.app.goo.gl/oefMiRENpgMKDKUN6" class="text-decoration-none small text-success mt-2 d-inline-block"><i class="fa-solid fa-map-pin me-1"></i>Домът на Булката (Варна, ул. Басанович 25)</a>
+                    </div>
+                </div>
+
+                <!-- Event 4 -->
+                <div class="timeline-item right" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <div class="timeline-time"><i class="fa-solid fa-clock me-2"></i>13:00</div>
+                        <h4 class="wedding-font">Граждански брак</h4>
+                        <a href="https://maps.app.goo.gl/754ipVajwZELkfLX6" class="text-decoration-none small text-success mt-2 d-inline-block"><i class="fa-solid fa-map-pin me-1"></i>Ритуална зала (Варна, ул. Крали Марко 3)</a>
+                    </div>
+                </div>
+
+                <!-- Event 5 -->
+                <div class="timeline-item left" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <div class="timeline-time"><i class="fa-solid fa-clock me-2"></i>15:00</div>
+                        <h4 class="wedding-font">Църковен брак</h4>
+                        <a href="https://maps.app.goo.gl/bAmFsToHRxNPHqGL7" class="text-decoration-none small text-success mt-2 d-inline-block"><i class="fa-solid fa-map-pin me-1"></i>Катедрален храм „Успение Богородично“ (Варна, пл. Свети Свети Кирил и Методий 2)</a>
+                    </div>
+                </div>
+
+                <!-- Event 6 -->
+                <div class="timeline-item right" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <div class="timeline-time"><i class="fa-solid fa-clock me-2"></i>17:00</div>
+                        <h4 class="wedding-font">Коктейл</h4>
+                        <p class="text-muted small mb-0">Паркиране: паркинг пред хотел "Арена Мар"</p>
+                        <a href="https://maps.app.goo.gl/k4zk1djmAurqUs4D7" class="text-decoration-none small text-success mt-2 d-inline-block"><i class="fa-solid fa-map-pin me-1"></i>Хотел „Арена Мар“ (Златни Пясъци)</a>
+                    </div>
+                </div>
+
+                <!-- Event 7 -->
+                <div class="timeline-item left" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <div class="timeline-time"><i class="fa-solid fa-clock me-2"></i>18:00</div>
+                        <h4 class="wedding-font">Вечеря</h4>
+                        <p class="text-muted small mb-0">Паркиране: паркинг пред хотел "Арена Мар"</p>
+                        <a href="https://maps.app.goo.gl/k4zk1djmAurqUs4D7" class="text-decoration-none small text-success mt-2 d-inline-block"><i class="fa-solid fa-map-pin me-1"></i>Хотел „Арена Мар“ (Златни Пясъци)</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <h4 class="wedding-font mb-2">Ани & Светльо</h4>
+            <p class="small mb-0">24 Октомври 2026 • Варна</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom Scripts -->
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            once: true, // whether animation should happen only once - while scrolling down
+            offset: 100, // offset (in px) from the original trigger point
+            duration: 800, // values from 0 to 3000, with step 50ms
+        });
+
+        // Countdown Timer Logic
+        const weddingDate = new Date("Oct 24, 2026 08:00:00").getTime();
+
+        const countdownFunction = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("countdown").innerHTML = "<h3 class='wedding-font'>The Day Has Arrived!</h3>";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
+            document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+            document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+            document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+        }, 1000);
+    </script>
+</body>
+</html>
